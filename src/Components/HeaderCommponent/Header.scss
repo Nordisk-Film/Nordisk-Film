@@ -3,6 +3,7 @@
     width: 100vw;
     height: 40vh; // Full viewport height
     overflow: hidden; // Prevent scrolling due to video overflow
+    margin-top: 8rem;
     
   
     .background-video {
@@ -13,7 +14,6 @@
       min-height: 100%; // Ensure video fills height
       object-fit: cover; // Scale video to cover the container
       z-index: 1; // Send video to the background
-      opacity: 0.8; // Adjust the opacity level
 
 
     }
