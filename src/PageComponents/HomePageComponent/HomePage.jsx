@@ -1,5 +1,6 @@
 import './HomePage.scss'
 import { Main } from '../../Components/MainComponent/Main.jsx';
+import { Header} from "../../Components/HeaderCommponent/Header.jsx"
 
 export const HomePage = () => {
   
@@ -7,7 +8,7 @@ export const HomePage = () => {
 
   return (
     <>
-  
+  <Header/>
     <Main>
       <section className="info">
         <h2>Hvad er FN’s Verdensmål for bæredygtig udvikling?</h2>
