@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import supabase from "../../Utils/Supabase/supabaseClient.js";
+import "../PosterListComponent/PosterList.scss"
 
 export const PosterList = () => {
   // State til at gemme genre data
@@ -26,14 +28,16 @@ export const PosterList = () => {
 
   // Returnerer en liste af genrer
   return (
-    <ul>
+    <ul className="posterUl">
       {PosterData &&
         PosterData.map((Poster) => {
           return (
-            <>
-            <img src={Poster.image_url} alt="" />
-            <li key={Poster.id}>{Poster.name}</li>
-            </>
+            <figure>
+            <img src={Poster.image_url} alt="Poster image" />
+            <figcaption key={Poster.id}> <p>{Poster.name}</p>
+              <br /> <Link to="/Posters">Add To Cart</Link>
+            </figcaption>
+            </figure>
           );
         })
       }
