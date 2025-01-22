@@ -6,7 +6,7 @@ return (
     <nav id="nav-section">
         <ul id="link-left">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/undervisning">Posters</Link></li>
+            <li><Link to="/Posters">Posters</Link></li>
             <li><Link to="/">About</Link></li>
             <li><Link to="/">Contact</Link></li>
         </ul>

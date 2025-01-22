@@ -1,0 +1,53 @@
+.posterUl {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 16px; 
+    list-style: none; 
+    font-family: "Inter", serif;
+
+
+  
+    figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 8px; 
+      text-align: center;
+      width: 300px;
+      height: 500px;
+      margin: 1.2rem;
+  
+      img {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 8px; 
+      }
+  
+      figcaption {
+        margin-top: 8px;
+        font-size: 1rem;
+        color: white;
+      }
+      a{
+        background-color: #1c4eb4;
+        padding: 0.5rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        margin: 1.5rem;
+   }
+   p {
+    display: inline-block; /* Ensures the paragraph respects width constraints */
+    overflow: hidden; /* Hides overflowing content */
+    text-overflow: ellipsis; /* Adds ellipsis when content overflows */
+    white-space: nowrap; /* Prevents text from wrapping */
+    max-width: 300px; /* Limits the width */
+    padding: 4px; /* Optional: Adds space between text and border */
+    box-sizing: border-box; /* Ensures padding is included in max-width */
+    margin-bottom: 8px;
+  }
+  
+    }
+   
+  }
+  
