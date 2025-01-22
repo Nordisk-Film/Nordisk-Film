@@ -44,13 +44,14 @@
         margin: 0;
 
         li {
+          padding: 0;
           a {
             text-decoration: none;
             color: white;
             font-size: 1.2rem;
             line-height: 1.8rem;
             padding: .25rem;
-
+            margin: 0;
             &:hover {
               color: #1C4EB4;
               transition: 200ms ease-in-out;
