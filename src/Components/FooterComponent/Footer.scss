@@ -3,11 +3,13 @@
     width: 100%;
     margin: 0;
     padding: 2rem 0;
+    font-family: "Inter", serif;
   
     .footerGridContainer {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 80%;
+
       margin: 0 auto;
   
       ul {

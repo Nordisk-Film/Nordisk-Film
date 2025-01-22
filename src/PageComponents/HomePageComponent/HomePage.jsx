@@ -1,5 +1,8 @@
 import './HomePage.scss'
 import { Main } from '../../Components/MainComponent/Main.jsx';
+import { Header} from "../../Components/HeaderCommponent/Header.jsx"
+import { GenreList } from '../../Components/GenreListComponent/GenreList.jsx';
+import { PosterList } from '../../Components/PosterListComponent/PosterList.jsx';
 
 export const HomePage = () => {
   
@@ -7,8 +10,10 @@ export const HomePage = () => {
 
   return (
     <>
-  
+  <Header/>
     <Main>
+      <GenreList/>
+      <PosterList/>
       <section className="info">
         <h2>Hvad er FN’s Verdensmål for bæredygtig udvikling?</h2>
         <p>FN's Verdensmål består af 17 mål og 169 delmål og er den til dato mest ambitiøse globale udviklingsdagsorden.</p>
