@@ -1,6 +1,7 @@
 // npm install react-router-dom
 //npm install -D sass-embedded
 // npm install styled-components
+//npm install @supabase/supabase-js
 // Developer branch
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
