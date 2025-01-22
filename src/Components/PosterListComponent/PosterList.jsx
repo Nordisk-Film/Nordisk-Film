@@ -33,9 +33,9 @@ export const PosterList = () => {
         PosterData.map((Poster) => {
           return (
             <figure>
-            <img src={Poster.image_url} alt="Poster image" />
+              <Link to="/Posters"><img src={Poster.image_url} alt="Poster image" /></Link>
             <figcaption key={Poster.id}> <p>{Poster.name}</p>
-              <br /> <Link to="/Posters">Add To Cart</Link>
+              <br /> <Link id="a" to="/Posters">Add To Cart</Link>
             </figcaption>
             </figure>
           );

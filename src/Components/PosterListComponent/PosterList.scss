@@ -16,25 +16,31 @@
       text-align: center;
       width: 300px;
       height: 500px;
-      margin: 1.2rem;
+      margin: 1.5rem;
   
       img {
         max-width: 100%; 
         height: auto; 
         border-radius: 8px; 
+        min-height: 426px;
+        cursor: pointer;
       }
   
       figcaption {
-        margin-top: 8px;
+        margin-top: 4px;
         font-size: 1rem;
         color: white;
       }
-      a{
-        background-color: #1c4eb4;
-        padding: 0.5rem;
+      #a{
+        background-color: #2D7DFE;
+        padding: 0.8rem;
         border-radius: 5px;
         font-size: 1rem;
         margin: 1.5rem;
+        transition: 300ms;
+        &:hover{
+            background-color: #1e5cda;
+        }
    }
    p {
     display: inline-block; /* Ensures the paragraph respects width constraints */
@@ -42,9 +48,10 @@
     text-overflow: ellipsis; /* Adds ellipsis when content overflows */
     white-space: nowrap; /* Prevents text from wrapping */
     max-width: 300px; /* Limits the width */
-    padding: 4px; /* Optional: Adds space between text and border */
+    padding: 8px; /* Optional: Adds space between text and border */
     box-sizing: border-box; /* Ensures padding is included in max-width */
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-family: "Exo", "sans-serif";
   }
   
     }

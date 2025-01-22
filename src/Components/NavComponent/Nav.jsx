@@ -11,7 +11,7 @@ return (
             <li><Link to="/">Contact</Link></li>
         </ul>
         <div id="logo-container">
-            <img src="src/assets/logo/Logo.svg" alt="" />
+            <Link to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </Link>
         </div>
         <ul id="link-right">
             <li><Link to="/">Log In</Link></li>
