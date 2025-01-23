@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { HomePage } from "../../PageComponents/HomePageComponent/HomePage";
+import { GenreList } from "../GenreListComponent/GenreList";
 
 
 export const Router = () => {
@@ -8,6 +9,9 @@ export const Router = () => {
     return (
     <Routes>
       <Route index element={<HomePage/>}/> 
+      <Route path='/:id' element={<GenreList/>}/>
+
     </Routes>
     )
   }
+  

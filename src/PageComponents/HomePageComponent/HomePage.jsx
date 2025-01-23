@@ -17,7 +17,6 @@ export const HomePage = () => {
       <GenreList/>
       <PosterList/>
       {/* Add a cooming soon posters (nice to have) */}
-    </Main>
     </>
   );
 };
