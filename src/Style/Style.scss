@@ -13,9 +13,10 @@
 body{
     background-color: #1C2739;
     color: white;
-}
 
-html{
-    width: 100%;
+    width: 100px;
+    margin: 0 auto;
     overflow-x: hidden;
+    display: flex;
+    justify-content: center;
 }

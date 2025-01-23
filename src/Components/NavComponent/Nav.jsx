@@ -6,12 +6,12 @@ return (
     <nav id="nav-section">
         <ul id="link-left">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/undervisning">Posters</Link></li>
+            <li><Link to="/Posters">Posters</Link></li>
             <li><Link to="/">About</Link></li>
             <li><Link to="/">Contact</Link></li>
         </ul>
         <div id="logo-container">
-            <img src="src/assets/logo/Logo.svg" alt="" />
+            <Link to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </Link>
         </div>
         <ul id="link-right">
             <li><Link to="/">Log In</Link></li>

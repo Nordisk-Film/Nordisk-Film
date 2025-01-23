@@ -1,12 +1,13 @@
 .HeaderBackground {
     position: relative;
     width: 100vw;
-    height: 40vh; // Full viewport height
+    height: 31vh; // Full viewport height
     overflow: hidden; // Prevent scrolling due to video overflow
-    margin-top: 8rem;
     font-family: "Exo", "sans-serif";
-    
-    
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 8rem;
+
   
     .background-video {
       position: absolute;
@@ -18,6 +19,7 @@
       z-index: 1; // Send video to the background
       opacity: 0.8;
 
+
     }
   
     .HeaderContent {
@@ -27,7 +29,7 @@
       color: white; // Ensure text is visible
   
       h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 350;
         padding: 1rem;
         padding-top: 1.5rem;
@@ -35,17 +37,18 @@
       }
   
       h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 300;
         margin: 10px 0 0;
       }
+    
       #Unlimited{
         font-weight: 500;
-        font-size: 3rem;
+        font-size: 2.5rem;
 
       }
       #top{
-        padding-top: 2.2rem;
+        padding-top: 2rem;
       }
     }
   }
