@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import supabase from "../../Utils/Supabase/supabaseClient.js";
+import { Link } from "react-router-dom";
 
 export const GenreList = () => {
   // State til at gemme genre data
@@ -29,8 +30,11 @@ export const GenreList = () => {
     <ul>
       {genreData &&
         genreData.map((genre) => {
+          console.log(genre.id);
+          
+          
           return (
-            <li key={genre.id}>{genre.title}</li>
+            <Link key={genre.id} to={`/${genre.id}`}>{genre.title}</Link>
           );
         })
       }

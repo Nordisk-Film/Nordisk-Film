@@ -10,12 +10,9 @@ export const HomePage = () => {
 
   return (
     <>
-  <Header/>
-    <Main>
       <GenreList/>
       <PosterList/>
       {/* Add a cooming soon posters (nice to have) */}
-    </Main>
     </>
   );
 };
