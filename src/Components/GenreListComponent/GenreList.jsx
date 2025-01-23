@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../../Utils/Supabase/supabaseClient.js";
 import { Link } from "react-router-dom";
+import "../GenreListComponent/GenreList.scss"
 
 export const GenreList = () => {
   // State til at gemme genre data
@@ -34,7 +35,7 @@ export const GenreList = () => {
           
           
           return (
-            <Link key={genre.id} to={`/${genre.id}`}>{genre.title}</Link>
+            <Link id="#b" key={genre.id} to={`/${genre.id}`}>{genre.title}</Link>
           );
         })
       }
