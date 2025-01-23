@@ -11,8 +11,6 @@ export const HomePage = () => {
 
   return (
     <>
-  <Header/>
-    <Main>
       <ThreeRandom/>
       <GenreList/>
       <PosterList/>
