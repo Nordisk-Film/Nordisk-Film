@@ -37,17 +37,14 @@
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-<<<<<<< Updated upstream
     width: 300px;
     height: 500px;
     a{
       text-decoration: none;
     }
-=======
     max-width: 285px; 
     width: 100%; 
     height: auto;
->>>>>>> Stashed changes
 
     img {
       max-width: 100%; 
@@ -78,12 +75,9 @@
       border-radius: 5px;
       font-size: 1rem;
       margin: 1.5rem;
-<<<<<<< Updated upstream
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
       transition: 300ms;
-=======
       transition: background-color 300ms;
->>>>>>> Stashed changes
 
       &:hover {
         background-color: #1e5cda;
@@ -91,12 +85,9 @@
         transition: 300ms;
       }
     }
-<<<<<<< Updated upstream
 
 
-=======
    
->>>>>>> Stashed changes
     p {
       display: inline-block;
       overflow: hidden; 
