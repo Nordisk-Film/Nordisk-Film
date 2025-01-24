@@ -69,7 +69,17 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1200px) {
+        #logo-container {
+
+            img {
+                display: none;
+            }
+        }
+
+    }
+
+    @media (max-width: 890px) {
         flex-direction: column;
         height: auto;
 
@@ -79,7 +89,7 @@
             display: flex;
             align-items: center;
             width: 100%;
-            
+
         }
 
         li {
@@ -111,9 +121,14 @@
                 height: fit-content;
             }
         }
-        #logo-container{
+
+        #logo-container {
             margin: 1.4rem auto 0 auto;
             left: 4rem;
+
+            img {
+                display: inline;
+            }
         }
     }
 
