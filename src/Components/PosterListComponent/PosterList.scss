@@ -1,10 +1,9 @@
-.load-more{
+.load-more {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  margin: 2rem auto; 
-  width: 6rem;
-  height: 2.2rem;
+  margin: 2rem auto;
+  padding: .5rem 1rem;
   color: white;
   font-size: medium;
   font-weight: 600;
@@ -12,6 +11,13 @@
   border-style: none;
   outline: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  &:hover{
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+
+  }
 }
 
 .posterUl {
@@ -32,6 +38,9 @@
     text-align: center;
     width: 300px;
     height: 500px;
+    a{
+      text-decoration: none;
+    }
 
     img {
       max-width: 100%;
@@ -40,6 +49,12 @@
       height: 426px;
       width: 285px;
       cursor: pointer;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+      transition: 300ms;
+
+      &:hover {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+      }
     }
 
     figcaption {
@@ -56,13 +71,16 @@
       border-radius: 5px;
       font-size: 1rem;
       margin: 1.5rem;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
       transition: 300ms;
 
       &:hover {
         background-color: #1e5cda;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+        transition: 300ms;
       }
     }
-   
+
 
     p {
       display: inline-block;
