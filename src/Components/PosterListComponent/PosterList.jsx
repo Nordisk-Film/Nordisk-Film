@@ -1,42 +1,66 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import supabase from "../../Utils/Supabase/supabaseClient.js";
+import "../PosterListComponent/PosterList.scss";
 
-export const PosterList = () => {
-  // State til at gemme genre data
-  const [PosterData, setPosterData] = useState([]);
+export const PosterList = ({ selectedGenre }) => {
+  const [PosterData, setPosterData] = useState([]); 
+  const [limit, setLimit] = useState(20); 
 
-  // Funktion til at hente data fra Supabase
   const getData = async () => {
-    if (supabase) {
-      const { data, error } = await supabase
-        .from("posters")
-        .select("id,name,image_url");
-      if (error) {
-        console.error("Error fetching posters", error);
-      } else {
-        setPosterData(data);
-      }
+    let query = supabase
+      .from("posters")
+      .select("id,name,image_url")
+      .limit(limit);
+
+    if (selectedGenre) {
+      query = supabase
+        .from("genre_poster_rel")
+        .select("posters(id,name,image_url)")
+        .eq("genre_id", selectedGenre)
+        .limit(limit);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      console.error("Error fetching posters", error);
+    } else {
+      const posters = selectedGenre ? data.map((rel) => rel.posters) : data;
+      setPosterData(posters);
     }
   };
 
-  // useEffect til sideeffekter og styring af render
   useEffect(() => {
     getData();
-  }, [setPosterData, supabase]);
+  }, [limit, selectedGenre]);
 
-  // Returnerer en liste af genrer
+  const loadMore = () => {
+    setLimit((prevLimit) => prevLimit + 40); 
+  };
+
   return (
-    <ul>
-      {PosterData &&
-        PosterData.map((Poster) => {
-          return (
-            <>
-            <img src={Poster.image_url} alt="" />
-            <li key={Poster.id}>{Poster.name}</li>
-            </>
-          );
-        })
-      }
-    </ul>
+    <div>
+      <ul className="posterUl">
+        {PosterData.map((Poster) => (
+          <figure key={Poster.id}>
+            <Link to="/Posters">
+              <img src={Poster.image_url} alt="Poster image" />
+            </Link>
+            <figcaption>
+              <p>{Poster.name}</p>
+              <br />
+              <Link id="a" to="/Posters">
+                Add To Cart
+              </Link>
+            </figcaption>
+          </figure>
+        ))}
+      </ul>
+      
+      <button onClick={loadMore} className="load-more">
+        Load More
+      </button>
+    </div>
   );
 };

@@ -1,22 +1,21 @@
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom';
-
-import { Footer } from './Components/FooterComponent/Footer.jsx';
+import React from 'react';
+import { Navbar } from "./Components/NavComponent/Nav.jsx";
+import { Header } from './Components/HeaderCommponent/Header.jsx';
 import { Main } from './Components/MainComponent/Main.jsx';
 import { Router } from './Components/RouterComponent/Router.jsx';
-import { Navbar} from "./Components/NavComponent/Nav.jsx"
+import { Footer } from './Components/FooterComponent/Footer.jsx';
 
 function App() {
   return (
-   <>
-   <Navbar/>
-   <Main>
-    <Router/>
-  </Main>
-   <Footer/>
-
-   </>
-  )
+    <>
+      <Navbar />
+      <Header />
+      <Main>
+        <Router />
+      </Main>
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
