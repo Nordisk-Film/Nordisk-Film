@@ -1,19 +1,17 @@
 import './HomePage.scss'
-import { Main } from '../../Components/MainComponent/Main.jsx';
-import { Header} from "../../Components/HeaderCommponent/Header.jsx"
-import { GenreList } from '../../Components/GenreListComponent/GenreList.jsx';
+import { useState } from 'react';
 import { PosterList } from '../../Components/PosterListComponent/PosterList.jsx';
 import { ThreeRandom } from '../../Components/ThreeRandomComponent/ThreeRandom.jsx';
+import GenreDropDown from '../../Components/GenreDropDownComponent/GenreDropDown.jsx';
 
 export const HomePage = () => {
-  
-  
+  const [selectedGenre, setSelectedGenre] = useState(""); // Define setSelectedGenre
 
   return (
     <>
       <ThreeRandom/>
-      <GenreList/>
-      <PosterList/>
+      <GenreDropDown setSelectedGenre={setSelectedGenre} /> {/* Pass setSelectedGenre to GenreDropDown */}
+      <PosterList selectedGenre={selectedGenre} /> {/* Pass selectedGenre to PosterList */}
       {/* Add a cooming soon posters (nice to have) */}
     </>
   );
