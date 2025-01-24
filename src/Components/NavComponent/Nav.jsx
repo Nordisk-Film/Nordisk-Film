@@ -14,8 +14,8 @@ return (
             <Link to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </Link>
         </div>
         <ul id="link-right">
-            <li><Link to="/">Log In</Link></li>
-            <li><Link to="/">Basket</Link></li>
+            <li><Link to="/">Log In <img src="src/assets/images/AccountLogo.svg" alt="Account logo" /></Link></li>
+            <li><Link to="/">Basket <img src="src/assets/images/CartLogo.svg" alt="Cart Logo" /></Link></li>
         </ul>
     </nav>
 )
