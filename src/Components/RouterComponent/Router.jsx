@@ -9,8 +9,6 @@ export const Router = () => {
     return (
     <Routes>
       <Route index element={<HomePage/>}/> 
-      <Route path='/:id' element={<GenreList/>}/>
-
     </Routes>
     )
   }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import supabase from "../../Utils/Supabase/supabaseClient.js";
 import './GenreDropDown.scss';
 
-const GenreDropDown = ({ setSelectedGenre }) => {
+export const GenreDropDown = ({ setSelectedGenre }) => {
     const [genreData, setGenreData] = useState([]);
 
     const getData = async () => {
@@ -17,8 +17,11 @@ const GenreDropDown = ({ setSelectedGenre }) => {
     };
 
     useEffect(() => {
-        getData();
+    
+        getData();    
+                    
     }, []);
+
 
     const handleChange = (event) => {
         setSelectedGenre(event.target.value);
@@ -33,5 +36,3 @@ const GenreDropDown = ({ setSelectedGenre }) => {
         </select>
     );
 };
-
-export default GenreDropDown;
