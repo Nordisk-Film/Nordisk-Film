@@ -5,7 +5,7 @@ import "../PosterListComponent/PosterList.scss";
 
 export const PosterList = ({ selectedGenre }) => {
   const [PosterData, setPosterData] = useState([]); 
-  const [limit, setLimit] = useState(40); 
+  const [limit, setLimit] = useState(20); 
 
   const getData = async () => {
     let query = supabase
