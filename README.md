@@ -1,8 +1,44 @@
-# React + Vite
+# Nordisk Film Plakater
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application for displaying and managing movie posters. It uses React for the frontend and Supabase for the backend.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/Nordisk-Film.git
+   cd Nordisk-Film
+
+2. Install the dependencies:
+npm i
+
+3. Create a .env file in the root directory and add your Supabase credentials:
+VITE_SUPABASE_URL=your-supabase-url
+VITE_SUPABASE_KEY=your-supabase-key
+
+4. Start the development server:
+npm run dev
+
+# Project Structure
+src/Components: Contains all the React components used in the application.
+src/PageComponents: Contains the main page components.
+src/Utils/Supabase: Contains the Supabase client configuration.
+src/main.jsx: Entry point of the application.
+index.html: Main HTML file.
+# Available Scripts
+npm run dev: Starts the development server.
+npm run build: Builds the application for production.
+npm run serve: Serves the built application.
+# Features
+Display a list of movie posters.
+Filter posters by genre.
+Load more posters on demand.
+Display a list of coming soon posters.
+# Dependencies
+React
+React Router DOM
+Supabase
+Sass
+Styled Components
+# License
+This project is licensed under the MIT License. ```
