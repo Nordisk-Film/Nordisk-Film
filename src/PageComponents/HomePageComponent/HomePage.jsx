@@ -6,15 +6,15 @@ import { GenreDropDown } from '../../Components/GenreDropDownComponent/GenreDrop
 import { CommingSoon } from '../../Components/CommingSoonComponent/CommingSoon.jsx';
 
 export const HomePage = () => {
-  const [selectedGenre, setSelectedGenre] = useState(""); // Define setSelectedGenre
+  const [selectedGenre, setSelectedGenre] = useState("");
+  const [comingSoonIds, setComingSoonIds] = useState([]); // Add state for comingSoonIds
 
   return (
     <>
       <ThreeRandom/>
-      <GenreDropDown setSelectedGenre={setSelectedGenre} /> {/* Passes/sends setSelectedGenre to GenreDropDown */}
-      <PosterList selectedGenre={selectedGenre} /> {/* Passes/sends selectedGenre to PosterList */}
-      <CommingSoon/>
-      {/* Add a cooming soon posters (nice to have) */}
+      <GenreDropDown setSelectedGenre={setSelectedGenre} />
+      <PosterList selectedGenre={selectedGenre} />
+      <CommingSoon setComingSoonIds={setComingSoonIds} /> {/* Pass setComingSoonIds to CommingSoon */}
     </>
   );
 };
