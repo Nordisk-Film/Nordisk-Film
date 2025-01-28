@@ -9,7 +9,8 @@ export const Router = () => {
     return (
     <Routes>
       <Route index element={<HomePage/>}/> 
-      <Route element={<PosterPage/>}/>
+      <Route path="/Posters" element={<PosterPage />} /> {/* <Route element={<PosterPage/>}/> */}
+
     </Routes>
     )
   }
