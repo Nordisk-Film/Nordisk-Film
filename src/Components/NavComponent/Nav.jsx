@@ -9,8 +9,8 @@ return (
         <ul id="link-left">
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/Posters">Posters</NavLink></li>
-            <li><NavLink to="/">About</NavLink></li>
-            <li><NavLink to="/">Contact</NavLink></li>
+            <li><NavLink to="/About">About</NavLink></li>
+            <li><NavLink to="/Contact">Contact</NavLink></li>
         </ul>
         <div id="logo-container">
             <NavLink to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </NavLink>
