@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import supabase from "../../Utils/Supabase/supabaseClient.js";
 
