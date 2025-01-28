@@ -14,7 +14,6 @@ export const Router = () => {
       <Route path="/Posters" element={<PosterPage />} />
       <Route path="/About" element={<AboutPage />} />
       <Route path="/Contact" element={<ContactPage />} />
-
     </Routes>
   )
 }
