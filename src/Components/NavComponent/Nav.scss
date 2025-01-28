@@ -12,10 +12,7 @@
     font-family: "Inter", serif;
     z-index: 4;
 
-    .active {
-        font-weight: 700;
-        letter-spacing: 2px;
-    }
+
 
     img {
         width: 100px;
@@ -38,6 +35,13 @@
         text-decoration: none;
         box-sizing: border-box;
         transition: 300ms ease-in-out;
+    }
+
+    .active {
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 1.3rem;
+
     }
 
     #logo-container {
