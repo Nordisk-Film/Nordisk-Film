@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
 import './Nav.scss'
 
 export const Navbar = () => {
 return (
     <nav id="nav-section">
         <ul id="link-left">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/Posters">Posters</Link></li>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/">Contact</Link></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/Posters">Posters</NavLink></li>
+            <li><NavLink to="/">About</NavLink></li>
+            <li><NavLink to="/">Contact</NavLink></li>
         </ul>
         <div id="logo-container">
-            <Link to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </Link>
+            <NavLink to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </NavLink>
         </div>
         <ul id="link-right">
             <li><Link to="/">Log In <img src="src/assets/images/AccountLogo.svg" alt="Account logo" /></Link></li>
