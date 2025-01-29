@@ -11,11 +11,11 @@ export const Navbar = () => {
                 <li><NavLink to="/Contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink></li>
             </ul>
             <div id="logo-container">
-                <NavLink to="/"><img src="src/assets/logo/Logo.svg" alt="" /> </NavLink>
+                <NavLink to="/"><img src="/src/assets/logo/Logo.svg" alt="" /> </NavLink>
             </div>
             <ul id="link-right">
-                <li><Link to="/">Log In <img src="src/assets/images/AccountLogo.svg" alt="Account logo" /></Link></li>
-                <li><Link to="/">Basket <img src="src/assets/images/CartLogo.svg" alt="Cart Logo" /></Link></li>
+                <li><Link to="/">Log In <img src="/src/assets/images/AccountLogo.svg" alt="Account logo" /></Link></li>
+                <li><Link to="/">Basket <img src="/src/assets/images/CartLogo.svg" alt="Cart Logo" /></Link></li>
             </ul>
         </nav>
     )
