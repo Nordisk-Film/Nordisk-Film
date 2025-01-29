@@ -6,7 +6,6 @@ export const PosterPage = () => {
 
     return(
         <Main>
-            
         </Main>
     )
 }
