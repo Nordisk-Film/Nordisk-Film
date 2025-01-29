@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Anuphan:wght@100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+.Cart {
+    position: fixed;
+    top: 0;
+    right: -600px;
+    width: 600px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 5;
+    color: #000000;
+    font-family: Helvetica, sans-serif;
+
+    .CartHeader {
+        display: flex;
+        margin-top: 1.25rem;
+        padding-bottom: .25rem;
+        border-bottom: #ccc 1px solid;
+        align-items: center;
+
+        #CartTitle {
+            margin: 0 0 1rem 1.5rem;
+            h2 {
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: 1.3rem;
+                margin: 0;
+                pointer-events: none;
+            }
+        }
+
+        .CartCloseContainer {
+            width: 7%; 
+            height: 7%; 
+            margin: 0 1.5rem 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                font-weight: 100;
+                
+            }
+        }
+    }
+}
+
+.Cart.open {
+    right: 0;
+}
+
+.CartOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 4;
+}
+
+.CartOverlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.CloseCart {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
