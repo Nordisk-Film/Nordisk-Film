@@ -29,7 +29,7 @@ const Cart = ({ isOpen, toggleCart }) => {
                                 <p className='productHeight'>Height 85 cm</p>{/* product height */}
                                 <p className='productWidth'>Width 62 cm</p>{/* product width */}
                                 <div className='quantityAndRemoveContainer'>
-                                    <div>
+                                    <div className='quantity'>
                                         - 1 +
                                     </div>
                                     <div>
@@ -38,8 +38,8 @@ const Cart = ({ isOpen, toggleCart }) => {
                                 </div>
                             </div>
                         </div>
-                                                {/* product example */}
-                                                <div className='productContainer'>
+                        {/* product example */}
+                        <div className='productContainer'>
                             <div className='productImages'>
                                 <img src="/src/assets/images/matrixrevolutionsplakat.jpg" alt="" />
                             </div>
@@ -49,7 +49,7 @@ const Cart = ({ isOpen, toggleCart }) => {
                                 <p className='productHeight'>Height 85 cm</p>{/* product height */}
                                 <p className='productWidth'>Width 62 cm</p>{/* product width */}
                                 <div className='quantityAndRemoveContainer'>
-                                    <div>
+                                    <div className='quantity'>
                                         - 1 +
                                     </div>
                                     <div>
