@@ -35,14 +35,18 @@ export const PosterDetail = () => {
       <img src={poster.image_url} alt={poster.name} />
       <figcaption >
         <h1>{poster.name}</h1>
-        <div dangerouslySetInnerHTML={{ __html: poster.description }} />
-        <p>Price: {poster.price}kr</p>
-        <p>Posters in stock: {poster.stock}</p>
-        <p>
-          Poster dimensions: <br /> 
-          Height {poster.height} cm <br /> 
-          Width {poster.width} cm
-        </p>
+        <div className='description' dangerouslySetInnerHTML={{ __html: poster.description }} />
+        <p className='price'>{poster.price} DKK</p>
+
+        <div className='posterDimensions'>
+          <h2>Poster dimensions:</h2>
+          <div className='dimensions'>
+            <p>Height: {poster.height} cm</p>
+            <p>Width: {poster.width} cm</p>
+          </div>
+        </div>
+        <p className='stock'>Posters in stock: {poster.stock}</p>
+
         <Link id="a" to="/cart">
           Add To Cart
         </Link>
