@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Main } from "../../Components/MainComponent/Main"; 
 import './ContactPage.scss'; 
 
-// Opretter ContactPage-komponenten
 export const ContactPage = () => {
     // state til at gemme form data
     const [formData, setFormData] = useState({
@@ -39,7 +38,7 @@ export const ContactPage = () => {
         }
     };
 
-    // Funktion til at håndtere ændringer i inputfelterne
+    // håndtere ændringer i inputfelterne
     const handleChange = (e) => {
         const { name, value } = e.target;
 
