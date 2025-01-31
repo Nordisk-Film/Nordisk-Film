@@ -1,8 +1,10 @@
-import { useState } from 'react';
-import { Main } from "../../Components/MainComponent/Main";
-import './ContactPage.scss';
+import { useState } from 'react'; 
+import { Main } from "../../Components/MainComponent/Main"; 
+import './ContactPage.scss'; 
 
+// Opretter ContactPage-komponenten
 export const ContactPage = () => {
+    // state til at gemme form data
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -11,59 +13,72 @@ export const ContactPage = () => {
         message: ''
     });
 
+    // State til at gemme valideringsfejl
     const [errors, setErrors] = useState({});
 
+    // Funktion til at validere inputfelterne
     const validateField = (name, value) => {
+        // regular expression til at validere input
         const nameRegex = /^[A-Za-z]+$/;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const phoneRegex = /^[0-9]{8}$/;
 
+        // Validerer hvert felt baseret på dets navn
         switch (name) {
             case 'firstName':
             case 'lastName':
-                return nameRegex.test(value);
+                return nameRegex.test(value); // Tjekker om navnet kun indeholder bogstaver
             case 'email':
-                return emailRegex.test(value);
+                return emailRegex.test(value); // Tjekker om emailen er gyldig
             case 'phone':
-                return phoneRegex.test(value);
+                return phoneRegex.test(value); // Tjekker om telefonnummeret består af præcis 8 cifre
             case 'message':
-                return value.trim() !== '';
+                return value.trim() !== ''; // Tjekker om beskeden ikke er tom
             default:
-                return true;
+                return true; // Hvis feltet ikke kræver validering, returneres true
         }
     };
 
+    // Funktion til at håndtere ændringer i inputfelterne
     const handleChange = (e) => {
         const { name, value } = e.target;
+
         setFormData({
             ...formData,
             [name]: value
         });
 
+        // Validerer feltet og opdaterer fejl-state
         if (!validateField(name, value)) {
             setErrors({
                 ...errors,
-                [name]: true
+                [name]: true // Markerer feltet som ugyldigt
             });
         } else {
             const { [name]: removedError, ...rest } = errors;
-            setErrors(rest);
+            setErrors(rest); // Fjerner fejlen, hvis inputtet er gyldigt
         }
     };
 
+    // Funktion til at håndtere forms submit
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Forhindrer standard sideopdatering
         const newErrors = {};
+
+        // check alle felter for at validere dem
         Object.keys(formData).forEach((field) => {
             if (!validateField(field, formData[field])) {
                 newErrors[field] = true;
             }
         });
-        setErrors(newErrors);
+
+        setErrors(newErrors); // Opdaterer fejl-state
+
+        // Hvis ingen fejl, håndteres submit
         if (Object.keys(newErrors).length === 0) {
-            // Handle form submission
-            console.log('Form submitted', formData);
-            // Reset form fields
+            console.log('Form submitted', formData); // Logger data
+
+            // Nulstiller formularens efter submit
             setFormData({
                 firstName: '',
                 lastName: '',
@@ -74,13 +89,17 @@ export const ContactPage = () => {
         }
     };
 
+    // Funktion til kantfarve på inputfelter baseret på validering
     const getBorderStyle = (field) => {
         if (formData[field] === '') {
-            return { borderLeft: '0.25rem solid transparent' };
+            return { borderLeft: '0.25rem solid transparent' }; // tom = ingen border
         }
-        return errors[field] ? { borderLeft: '0.25rem solid red' } : { borderLeft: '0.25rem solid lime' };
+        return errors[field]
+            ? { borderLeft: '0.25rem solid red' } // Rød kant ved fejl
+            : { borderLeft: '0.25rem solid lime' }; // Grøn kant ved gyldigt input
     };
 
+    // Funktion til at tjekke, om hele formularen er gyldig
     const isFormValid = () => {
         return Object.keys(formData).every((field) => validateField(field, formData[field]));
     };
@@ -140,7 +159,7 @@ export const ContactPage = () => {
                 <div className="button-container">
                     <button
                         type="submit"
-                        className={isFormValid() ? 'active' : ''}
+                        className={isFormValid() ? 'active' : ''} // Form valid = gør knap aktiv
                     >
                         Submit
                     </button>
