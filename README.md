@@ -1,4 +1,5 @@
 # Nordisk Film Plakater
+# Database might not be running if no results/posters shown, Please contact me if this is the case - Max Madeleine
 
 This project is a web application for displaying and managing movie posters. It uses React for the frontend and Supabase for the backend.
 
@@ -10,13 +11,9 @@ This project is a web application for displaying and managing movie posters. It 
    cd Nordisk-Film
 
 2. Install the dependencies:
-npm i
+npm i (.env is freely exposed for this project)
 
-3. Create a .env file in the root directory and add your Supabase credentials:
-VITE_SUPABASE_URL=your-supabase-url
-VITE_SUPABASE_KEY=your-supabase-key
-
-4. Start the development server:
+3. Start the development server:
 npm run dev
 
 # Project Structure
